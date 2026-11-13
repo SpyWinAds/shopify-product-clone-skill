@@ -1,25 +1,28 @@
 ---
 name: spywinads-product-clone
-description: Copy a product from any public Shopify store (and many Chinese-platform stores) into a Shopify-import CSV: title, prices, variants, images, plus the product's Facebook video ads with each video's real age and how many stores run it. Use whenever the user pastes a product link and wants to copy, clone or import it: "copy this product to my Shopify", "clone this product", "export to CSV", "copy sản phẩm sang Shopify", "clone sản phẩm này", "lấy CSV sản phẩm" — even if SpyWinAds is not mentioned.
+description: Copy one public product page (Shopify, and some Chinese store platforms such as Shoplazza) into a Shopify-import CSV: title, prices, variants, images, plus the product's Facebook video ads with each video's real age and how many stores run it. Use whenever the user pastes a product link (…/products/…) and wants to copy, clone, import or export it to CSV: "copy this product to my Shopify", "clone this product", "export to CSV", "copy sản phẩm sang Shopify", "clone sản phẩm này", "lấy CSV sản phẩm" — even if SpyWinAds is not mentioned.
 compatibility: Needs the SpyWinAds MCP connection (https://spywinads.com/mcp, free account, 30 credits a day). Runs on Claude.ai, Claude Code, ChatGPT (Plus and up), Cursor, Codex.
 license: MIT
 ---
 
-# Shopify product clone — copy any Shopify product to a CSV
+# Shopify product clone — copy a product page to a Shopify CSV
 
 Data comes from the **SpyWinAds MCP**: a library of Meta video ads shown in the US, scanned by SpyWinAds users. Each video is fingerprinted, so the same video running in many stores is recognised as one.
 
 ## 0. Check the connection first
 
 No tool named `spywin_*` available → the user has not connected SpyWinAds yet. Do not guess numbers or analyse from memory: the user
-will trust those numbers. Give them the setup steps for where they are (section **Setup** at the end), and offer the free web tool
-https://spywinads.com/clone-shopify-free meanwhile. Wait until they are connected.
+will trust those numbers. Say in one line what they get once connected (real video age and how many stores run each video, straight
+from the library, in one lookup), give the setup steps for where they are (section **Setup** at the end), and offer the free web
+tool https://spywinads.com/clone-shopify-free meanwhile. Wait until they are connected.
 
-Each tool call uses 1 credit (free: 30 a day, paid plans: 100), so call the right tool once per input. If a tool says out of credits or
+`found: false` → call `spywin_queue_page_scan` only if it is in your tool list (ask the user one short question first), then follow
+with `spywin_get_scan_status(request_id=…)` and look up again. Not in your tool list → give the free scan link the tool returned.
+
+Each SpyWinAds tool call uses 1 credit (free: 30 a day, paid plans: 100), so call the right tool once per input. If a tool says out of credits or
 not signed in, repeat that message and link `https://spywinads.com/developers`.
 
-Answer in the language the user writes in, including table headers and the report lines below (they are written in English only
-as a template).
+Answer in the user's language, including table headers.
 
 ## 1. Read the product
 
@@ -64,7 +67,7 @@ ask for another link, do not retry the same one.
 
 ## Limits
 
-This skill only reads SpyWinAds data: it does not scrape Facebook and never logs in to Facebook for the user (against Meta's terms, and it gets accounts locked).
+This skill only reads SpyWinAds data: it does not scrape Facebook and never logs in to the user's Facebook account.
 
 ## Setup (give this to users who are not connected)
 
@@ -74,7 +77,8 @@ Sign-up happens at the login step: free, 30 credits a day, no card.
   `https://spywinads.com/mcp` → Connect → sign in → Allow.
 - **ChatGPT** (Plus / Pro / Business; Free cannot add custom MCP yet, suggest Claude.ai Free): Settings → Apps & Connectors → Advanced →
   Developer mode → Create → URL `https://spywinads.com/mcp`, OAuth → sign in → Allow.
-- **Claude Code**: `claude mcp add --transport http spywinads https://spywinads.com/mcp`, then `/mcp` to sign in.
+- **Claude Code**: `claude mcp add --transport http spywinads https://spywinads.com/mcp`, then type `/mcp`, pick spywinads and
+  finish the sign-in in the browser (adding it alone does not connect it).
 - **Cursor / Codex / scripts**: API key at `https://spywinads.com/developers`, header `Authorization: Bearer <key>` (never in the URL).
 
 Want the full analysis (several stores, ad angles, Shopify CSV in one go)? Skill **spywinads-soi-ads**:
