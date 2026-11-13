@@ -9,7 +9,7 @@ Free web version, no AI needed: https://spywinads.com/clone-shopify-free
 ## Setup (3 minutes, free)
 
 Two parts, you need both: **connect the SpyWinAds MCP** (the data) and **add this skill** (the instructions). The MCP sign-in step creates a
-free SpyWinAds account: 30 credits a day, no card. No GitHub account needed. Then try: `copy sản phẩm này sang Shopify https://<store>/products/<handle>`
+free SpyWinAds account: 30 credits a day, no card. No GitHub account needed. Then try: `copy this product to my Shopify https://achandise.com/products/jesus-cross`
 
 | You use | Works? |
 |---|---|
@@ -30,14 +30,14 @@ Custom connectors are available on Free (one connector) and Skills too
 
    → Customize → **Skills** → **+** → Create skill → **Upload a skill** → pick the zip. Turn on Code execution (Settings → Capabilities)
    if Claude asks.
-3. New chat: `copy sản phẩm này sang Shopify https://<store>/products/<handle>`
+3. New chat: `copy this product to my Shopify https://achandise.com/products/jesus-cross`
 
 ### ChatGPT (Plus / Pro / Business)
 1. Settings → Apps & Connectors → Advanced settings → **Developer mode** on → **Create** → name `SpyWinAds`, URL
    `https://spywinads.com/mcp`, Authentication **OAuth** → sign in → Allow.
 2. Create a **Project** → Instructions → paste all of
    [SKILL.md](https://raw.githubusercontent.com/SpyWinAds/shopify-product-clone-skill/main/SKILL.md).
-3. In that Project, turn SpyWinAds on (**+** → Developer mode) and type `copy sản phẩm này sang Shopify https://<store>/products/<handle>`.
+3. In that Project, turn SpyWinAds on (**+** → Developer mode) and type `copy this product to my Shopify https://achandise.com/products/jesus-cross`.
 
 ChatGPT Free cannot add a custom MCP yet: use Claude.ai Free (above), or the free web tool https://spywinads.com/clone-shopify-free.
 
