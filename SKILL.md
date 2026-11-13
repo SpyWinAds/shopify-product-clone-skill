@@ -59,7 +59,8 @@ ask for another link, do not retry the same one.
   can show a video that 4 other stores still run: say exactly that ("paused here, still running in 4 other stores"), it is not a
   contradiction.
 - A product name that looks like a code (`ymtldysdym1`) is the store's URL handle: say the name is not readable and give the
-  landing page. Same product with several videos → one row, "2 videos".
+  landing page. Same product with several videos → one row: numbers of the video with the most `stores_ever`, plus "2 videos".
+- Sort rows by `stores_ever` (most copied first). The tool returns the top videos only: say so ("top 12 of 59 videos").
 - Group brands by the **landing-page domain**, never by ad copy. Two stores with the same hook are still two brands.
 - The library only sees a **minimum count of ads observed**: no spend, reach, orders or revenue. Many ads / many stores / a long run
   means *being invested in or copied*, not *profitable*. Say "worth a look because…", never "winning", "profitable", "making sales".
