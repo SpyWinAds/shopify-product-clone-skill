@@ -1,0 +1,20 @@
+{
+ "skill_name": "spywinads-product-clone",
+ "evals": [
+  {
+   "id": 1,
+   "name": "clone-vi",
+   "prompt": "copy sản phẩm này sang shopify của mình https://aluckgoodate.com/products/journey-to-bethlehem",
+   "files": [],
+   "assertions": [
+    "Calls SpyWinAds tools at most 3 times",
+    "Answers in the user's language, incl. table headers",
+    "Video age given as date + number of days",
+    "Has a limits line: no spend / revenue data",
+    "Never claims profit / winning / making sales",
+    "CSV link first with the Shopify import path and 24-hour note",
+    "One reminder to rewrite text / own photos"
+   ]
+  }
+ ]
+}
