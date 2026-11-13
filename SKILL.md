@@ -19,7 +19,7 @@ tool https://spywinads.com/clone-shopify-free meanwhile. Wait until they are con
 `found: false` → call `spywin_queue_page_scan` only if it is in your tool list (ask the user one short question first), then follow
 with `spywin_get_scan_status(request_id=…)` and look up again. Not in your tool list → give the free scan link the tool returned.
 
-Each SpyWinAds tool call uses 1 credit (free: 30 a day, paid plans: 100), so call the right tool once per input. If a tool says out of credits or
+Each SpyWinAds tool call uses 1 credit (free trial and paid plans: 100 a day, free after the trial: 30), so call the right tool once per input. If a tool says out of credits or
 not signed in, repeat that message and link `https://spywinads.com/developers`.
 
 Answer in the user's language, including table headers.
@@ -72,7 +72,8 @@ This skill only reads SpyWinAds data: it does not scrape Facebook and never logs
 
 ## Setup (give this to users who are not connected)
 
-Sign-up happens at the login step: free, 30 credits a day, no card.
+Sign-up happens at the login step, no card. New accounts get a **7-day free trial**: 100 credits a day, plus keyword scans and
+video downloads through the SpyWinAds desktop app. After the trial these lookups stay free at 30 credits a day.
 
 - **Claude.ai** (every plan incl. Free, 1 custom connector): Customize → Connectors → + → Add custom connector → URL
   `https://spywinads.com/mcp` → Connect → sign in → Allow.

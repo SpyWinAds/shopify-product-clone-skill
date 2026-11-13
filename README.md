@@ -9,7 +9,8 @@ Free web version, no AI needed: https://spywinads.com/clone-shopify-free
 ## Setup (3 minutes, free)
 
 Two parts, you need both: **connect the SpyWinAds MCP** (the data) and **add this skill** (the instructions). The MCP sign-in step creates a
-free SpyWinAds account: 30 credits a day, no card. No GitHub account needed. Then try: `copy this product to my Shopify https://achandise.com/products/jesus-cross`
+free SpyWinAds account, no card: **7-day free trial** (100 credits a day, plus keyword scans and video downloads with the SpyWinAds
+desktop app), then 30 credits a day for these lookups, still free. No GitHub account needed. Then try: `copy this product to my Shopify https://achandise.com/products/jesus-cross`
 
 | You use | Works? |
 |---|---|
@@ -64,7 +65,7 @@ URL). Paste SKILL.md into `AGENTS.md` / your rules.
 
 ## Limits (plainly)
 
-Free: 30 credits a day (1 tool call = 1 credit; this skill usually needs 1 per lookup). Paid plans: 100. Data = Meta ads shown in the US, scanned by
+7-day free trial: 100 credits a day. After that, free: 30 credits a day (1 tool call = 1 credit; this skill usually needs 1 per lookup). Paid plans: 100. Data = Meta ads shown in the US, scanned by
 SpyWinAds users. Counts are the minimum ads observed: **no spend, reach, orders or revenue**. Many ads or many stores means tested or
 copied, **not proven to sell**.
 
